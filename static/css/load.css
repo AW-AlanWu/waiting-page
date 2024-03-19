@@ -1,0 +1,31 @@
+#loading *{
+    margin: 0;
+    padding: 0;
+}
+
+#loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+#loading span{
+    width: 5px;
+    height: 20px;
+    background-color: black;
+    margin-left: 3px;
+    transform: scaleY(0);
+    animation: animate 1s linear infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate{
+    0%,100%{
+        transform: scaleY(0);
+    }
+    50%{
+        transform: scaleY(1.5);
+    }
+}
